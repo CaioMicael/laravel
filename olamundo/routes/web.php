@@ -21,7 +21,8 @@ Route::get(
 )->name('sono.resultado');
 
 Route::get('/calculoAutonomia', function () {
-    [calculoAutonomiaController::class, 'index'];
+    $controller = new calculoAutonomiaController();
+    return $controller->index();
 })->name('calculoAutonomia');
 
 Route::get(
@@ -31,5 +32,10 @@ Route::get(
 
 Route::get('/imc', function () {
     $controller = new ClassControllerIMC();
-    return $controller->imc(80, 1.80);
+    return $controller->index();
 })->name('imc');
+
+Route::get(
+    'imc/resultado', 
+    [ClassControllerIMC::class, 'imc']
+)->name('imc.resultado');

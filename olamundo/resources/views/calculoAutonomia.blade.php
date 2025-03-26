@@ -37,7 +37,7 @@
 <body>
     
     
-    <form method="GET" action="/{{ route('calculoAutonomia.resultado') }}">
+    <form method="GET" action="{{ route('calculoAutonomia.resultado') }}">
     
         <!-- Campo Gasolina -->
         <div class="form-group">
