@@ -1,25 +1,15 @@
 @section('title', $title)
+
 @section('content')
-    <div>
-        <h1>
-            Olá, {{ $name }}
-        </h1>
+    <div class="container">
+        <div class="navigation mt-4">
+            <h2>Navegação</h2>
+            <div class="list-group">
+                <a href="{{ route('imc') }}" class="list-group-item list-group-item-action">Calculadora de IMC</a> <br>
+                <a href="{{ route('sono') }}" class="list-group-item list-group-item-action">Sono Ideal</a> <br>
+                <a href="{{ route('calculoAutonomia') }}" class="list-group-item list-group-item-action">Calcular autonomia veículo</a>
+            </div>
+        </div>
     </div>
-    <div>
-        <p>
-           Idade: {{ $idade }}
-        </p>
-    </div>
-    <div>
-        <p>
-            Altura: {{ $altura }}
-        </p>
-    </div>
-    <div>
-        <p>
-            Peso: {{ $peso }}
-        </p>
-    </div>
-    <a href="{{ route('imc') }}" class="btn btn-primary">Executar Rota</a>
 @endsection
 @yield ('content')
