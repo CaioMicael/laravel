@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\calculoAutonomiaController;
 use App\Http\Controllers\ClassControllerIMC;
 use App\Http\Controllers\sonoController;
+use App\Http\Controllers\ClassControllerTipoContato;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,3 +40,13 @@ Route::get(
     'imc/resultado', 
     [ClassControllerIMC::class, 'imc']
 )->name('imc.resultado');
+
+Route::get(
+    'contato/tipocontato',
+    [ClassControllerTipoContato::class, 'index']
+)->name('tipocontato');
+
+Route::get(
+    'contato/tipocontato/resultado',
+    [ClassControllerTipoContato::class, 'insereTipoContato']
+)->name('tipocontato.resultado');

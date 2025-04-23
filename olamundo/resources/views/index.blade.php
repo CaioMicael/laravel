@@ -7,7 +7,8 @@
             <div class="list-group">
                 <a href="{{ route('imc') }}" class="list-group-item list-group-item-action">Calculadora de IMC</a> <br>
                 <a href="{{ route('sono') }}" class="list-group-item list-group-item-action">Sono Ideal</a> <br>
-                <a href="{{ route('calculoAutonomia') }}" class="list-group-item list-group-item-action">Calcular autonomia veículo</a>
+                <a href="{{ route('calculoAutonomia') }}" class="list-group-item list-group-item-action">Calcular autonomia veículo</a> <br>
+                <a href="{{ route('tipocontato') }}" class="list-group-item list-group-item-action">Cadastrar tipo contato</a>
             </div>
         </div>
     </div>
